@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="author" content="Jhon Manosalva" />
+    <meta
+      name="keywords"
+      content="Calculadora Web, realizada por estudiantes universitarios, como proyecto de clases "
+    />
+    <meta
+      name="description"
+      content="Calculadora Web, cambia a tres temas y realiza operaciones basicas"
+    />
+    <!--icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/calculadora (2).png"
+    />
+     <!--style css-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Calculadora web</title>
+  </head>
+
+  <body class="theme-1">
+    <main>
+      <!--inicio ventana modal-->
+      <div id="modal_container" class="modal-container">
+        <div class="modal">
+          <h1 class="TM">Equipo de Desarrollo</h1>
+          <p class="PM">Fabian Enrique Rumbo Quintero</p>
+          <p class="PM">Yeremis Alveades Mendoza</p>
+          <p class="PM">Santiago Pupo Cogollo</p>
+          <p class="PM">Jhon Jaider Manosalva Rangel</p>
+          <button class="btn-modalC" id="close">Cerrar</button>
+        </div>
+      </div>
+      <!--fin ventana modal-->
+      <!--inicio calculadora-->
+      <header>
+        <h4>Calculadora</h4>
+        <button class="abrir btn-modalA" id="open">
+          <i class="bx bx-code" style="color: #ffffff"></i>
+        </button>
+        <div class="theme-container">
+          <h6>Tema</h6>
+          <div class="theme-btn-container">
+            <div class="theme-btns theme-btn-1 show" id="theme-1"></div>
+            <div class="theme-btns theme-btn-2" id="theme-2"></div>
+            <div class="theme-btns theme-btn-3" id="theme-3"></div>
+          </div>
+        </div>
+      </header>
+      <div class="display"></div>
+      <div class="key-pad">
+        <button
+          class="keys primary-key numeric-key"
+          id="7"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          7
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="8"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          8
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="9"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          9
+        </button>
+        <button
+          class="keys secondary-key au"
+          id="Backspace"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          DEL
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="4"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          4
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="5"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          5
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="6"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          6
+        </button>
+        <button
+          class="keys primary-key"
+          id="+"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          +
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="1"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          1
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="2"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          2
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="3"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          3
+        </button>
+        <button
+          class="keys primary-key au"
+          id="-"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          -
+        </button>
+        <button
+          class="keys primary-key au"
+          id="."
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          .
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="0"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          0
+        </button>
+        <button
+          class="keys primary-key"
+          id="/"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          /
+        </button>
+        <button
+          class="keys primary-key"
+          id="*"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          x
+        </button>
+        <button
+          class="keys secondary-key grey-key au"
+          id="Reset"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          RESET
+        </button>
+        <button class="keys special-key red-key au" id="Enter" tabindex="-1">
+          =
+        </button>
+      </div>
+      <!--inicio calculadora-->
+    </main>
+    <!-- jQuery y scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/theme-changer.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/funcion.js"></script>
+
+    <!--   
+               desarrollador 
+        Jhon Jaider Manosalva Rangel
+  -->
+  </body>
+</html>
